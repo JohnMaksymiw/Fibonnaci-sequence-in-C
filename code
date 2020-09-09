@@ -1,0 +1,46 @@
+int i;
+  
+/* Generate first 2 numbers of sequence*/ 
+
+  for (i = 0; i < 2; i++) {
+    
+    if (i <= 1){
+
+      printf("%d\n", i);
+      
+      }
+    }
+
+/* Initialise and assign previous, current and next variables
+
+Print the third sequence*/
+
+  int previous = 0;
+  int current = 1; 
+  int next = previous + current;
+
+  printf("%d\n",next);
+
+/* Test a single iterative step to generate the fourth step */ 
+
+  previous = current;
+  current = next;
+  next = previous + current;
+
+  printf("%d\n",next);
+
+/* Loop the step above to create the remaining points */
+
+  int j;
+  for (j = 0; j < 6; j++) {
+
+  previous = current;
+  current = next;
+  next = previous + current;
+
+  printf("%d\n",next);
+
+
+  }
+  
+}
